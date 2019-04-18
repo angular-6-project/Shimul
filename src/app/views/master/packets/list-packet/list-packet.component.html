@@ -1,0 +1,42 @@
+<!-- list user -->
+<div class="animated fadeIn">
+    <div class="row">
+      <div class="col-lg-8">
+          <div class="card">
+            <div class="card-header">
+                <i class="fa fa-align-justify"></i> Packet List
+                <button [routerLink]=" ['/master/addPacket'] " _ngcontent-c1="" class="btn btn-sm btn-primary pull-right" ><i _ngcontent-c1="" class="fa fa-dot-circle-o"></i> Add</button>
+            </div>
+            <div class="card-body">
+              <table class="table table-responsive-sm">
+                <thead>
+                  <tr>
+                    <th>Packet Name</th>
+                    <th>MRP</th>
+                    <th>Snf Per</th>
+                    <th>Units</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>TONED MILK</td>
+                    <td>39</td>
+                    <td>8.5</td>
+                    <td>12</td>
+                    <td>
+                      <span class="badge badge-success">Active</span>
+                    </td>
+                    <td>
+                        <button class="btn btn-primary"  [routerLink]=" ['/master/editPacket'] "style="margin-left: 20px;"> Edit</button>
+                        <!-- <button class="btn btn-danger"  (click)="deleteUser(i)"  style="margin-left: 1px;"> Delete</button> -->
+                      </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>

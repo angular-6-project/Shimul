@@ -1,0 +1,159 @@
+
+<div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <button [routerLink]="['/master/listBank']" _ngcontent-c1="" class="btn btn-sm btn-primary pull-right"><i
+            _ngcontent-c1="" class="fa fa-dot-circle-o"></i> List</button>
+        <strong>Update Bank</strong>
+      </div>
+      <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+        <div class="card-body">
+          <hr class="hr-text" data-content="Contact Information">
+          <div class="row">
+            <div class="form-group col-sm-3">
+              <label for="BankCode">Bank Code</label>
+              <input type="number" class="form-control" formControlName="BankCode" [ngClass]="{ 'is-invalid': submitted && f.BankCode.errors }"
+                placeholder="Bank-code" required>
+              <div *ngIf="'submitted && f.BankCode.errors'" class="invalid-feedback">
+                <div *ngIf="'f.BankCode.errors.required'">Bank Code is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="BankName">Bank Name</label>
+              <input type="text" class="form-control" formControlName="BankName" [ngClass]="{ 'is-invalid': submitted && f.BankName.errors }"
+                placeholder="Bank-name" required>
+              <div *ngIf="'submitted && f.BankName.errors'" class="invalid-feedback">
+                <div *ngIf="'f.BankName.errors.required'">Bank Name is required</div>
+              </div>
+            </div>
+         
+            <div class="form-group col-sm-3">
+              <label for="accountNo">Account No</label>
+              <input type="number" class="form-control" formControlName="accountNo" [ngClass]="{ 'is-invalid': submitted && f.accountNo.errors }"
+                placeholder="account-number" required>
+              <div *ngIf="'submitted && f.accountNo.errors'" class="invalid-feedback">
+                <div *ngIf="'f.accountNo.errors.required'">Account No is required</div>
+              </div>
+            </div>
+
+            <div class="form-group col-sm-3">
+                <label for=" addressCode"> Address Code</label>
+                <input type="number" class="form-control" formControlName=" addressCode" [ngClass]="{ 'is-invalid': submitted && f. addressCode.errors }"
+                  placeholder=" address-code" required>
+                <div *ngIf="'submitted && f. addressCode.errors'" class="invalid-feedback">
+                  <div *ngIf="'f. addressCode.errors.required'"> Address Code is required</div>
+                </div>
+              </div>
+          </div>
+          <div class="row">
+          
+            <div class="form-group col-sm-3">
+              <label for="bankPos"> Bank Pos</label>
+              <input type="number" class="form-control" formControlName="bankPos" [ngClass]="{ 'is-invalid': submitted && f.bankPos.errors }"
+                placeholder="bank-pos" required>
+              <div *ngIf="'submitted && f.bankPos.errors'" class="invalid-feedback">
+                <div *ngIf="'f.bankPos.errors.required'">Bank Pos is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+                <label for="BankType">Bank Type</label>
+                <select class="form-control" formControlName="BankType">
+                 <option value="1">bob</option>
+                </select>
+              </div>
+            <div class="form-group col-sm-3">
+              <label for="bankComm">Bank Comm</label>
+              <input type="number" class="form-control" formControlName="bankComm" [ngClass]="{ 'is-invalid': submitted && f.bankComm.errors }"
+                placeholder="bank-comm" required>
+              <div *ngIf="'submitted && f.bankComm.errors'" class="invalid-feedback">
+                <div *ngIf="'f.bankComm.errors.required'">Bank Comm is required</div>
+              </div>
+            </div>
+
+              <div class="form-group col-sm-3">
+              <label for=" mainBankCode"> Main Bank Code</label>
+              <input type="number" class="form-control" formControlName=" mainBankCode" [ngClass]="{ 'is-invalid': submitted && f. mainBankCode.errors }"
+                placeholder=" main-bank-code" required>
+              <div *ngIf="'submitted && f. mainBankCode.errors'" class="invalid-feedback">
+                <div *ngIf="'f. mainBankCode.errors.required'"> Main Bank Code is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-sm-3">
+              <label for="depositeAmount">Deposite Amount</label>
+              <input type="number" class="form-control" formControlName="depositeAmount" [ngClass]="{ 'is-invalid': submitted && f.depositeAmount.errors }"
+                placeholder="deposite-amount" required>
+              <div *ngIf="'submitted && f.depositeAmount.errors'" class="invalid-feedback">
+                <div *ngIf="'f.depositeAmount.errors.required'">Deposite Amount is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="depositePerticulars"> Deposite Perticulars</label>
+              <input type="number" class="form-control" formControlName="depositePerticulars" [ngClass]="{ 'is-invalid': submitted && f.depositePerticulars.errors }"
+                placeholder="deposite-perticulars" required>
+              <div *ngIf="'submitted && f.depositePerticulars.errors'" class="invalid-feedback">
+                <div *ngIf="'f.depositePerticulars.errors.required'">Deposite Perticulars is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="bankCode">Bank Code</label>
+              <input type="number" class="form-control" formControlName="bankCode" [ngClass]="{ 'is-invalid': submitted && f.bankCode.errors }"
+                placeholder="bank-code" required>
+              <div *ngIf="'submitted && f.bankCode.errors'" class="invalid-feedback">
+                <div *ngIf="'f.bankCode.errors.required'">Bank Code is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="bankAccountNo">Bank Account No</label>
+              <input type="number" class="form-control" formControlName="bankAccountNo" [ngClass]="{ 'is-invalid': submitted && f.bankAccountNo.errors }"
+                placeholder="bank-account-no" required>
+              <div *ngIf="'submitted && f.bankAccountNo.errors'" class="invalid-feedback">
+                <div *ngIf="'f.bankAccountNo.errors.required'">Bank Account No is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-sm-3">
+              <label for=" startDate"> Start Date</label>
+              <input type="date" class="form-control" formControlName=" startDate" [ngClass]="{ 'is-invalid': submitted && f. startDate.errors }"
+                placeholder=" start-date" required>
+              <div *ngIf="'submitted && f. startDate.errors'" class="invalid-feedback">
+                <div *ngIf="'f. startDate.errors.required'"> Start Date is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="usersCode">Users Code</label>
+              <input type="text" class="form-control" formControlName="usersCode" [ngClass]="{ 'is-invalid': submitted && f.usersCode.errors }"
+                placeholder="users-code" required>
+              <div *ngIf="'submitted && f.usersCode.errors'" class="invalid-feedback">
+                <div *ngIf="'f.usersCode.errors.required'">Users Code is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="payMode">Pay Mode</label>
+              <input type="number" class="form-control" formControlName="payMode" [ngClass]="{ 'is-invalid': submitted && f.payMode.errors }"
+                placeholder="pay-mode" required>
+              <div *ngIf="'submitted && f.payMode.errors'" class="invalid-feedback">
+                <div *ngIf="'f.payMode.errors.required'">Pay Mode is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+                <label for=" tableFrom"> Table From</label>
+                <input type="number" class="form-control" formControlName=" tableFrom" [ngClass]="{ 'is-invalid': submitted && f. tableFrom.errors }"
+                  placeholder=" table-from" required>
+                <div *ngIf="'submitted && f. tableFrom.errors'" class="invalid-feedback">
+                  <div *ngIf="'f. tableFrom.errors.required'"> Table From is required</div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Update</button>
+          <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Cancel</button>
+          <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--/.col-->

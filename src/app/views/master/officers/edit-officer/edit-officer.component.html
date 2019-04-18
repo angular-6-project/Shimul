@@ -1,0 +1,39 @@
+
+<div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <button [routerLink]="['/master/listOfficer']" _ngcontent-c1="" class="btn btn-sm btn-primary pull-right"><i
+            _ngcontent-c1="" class="fa fa-dot-circle-o"></i> List</button>
+        <strong>Update Officer</strong>
+      </div>
+      <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+        <div class="card-body">
+          <hr class="hr-text" data-content="Contact Information">
+          <div class="row">
+            <div class="form-group col-sm-3">
+              <label for="OfficerCode">Officer Code</label>
+              <input type="text" class="form-control"   value="OF364" formControlName="OfficerCode" [ngClass]="{ 'is-invalid': submitted && f.OfficerCode.errors }"
+                placeholder="Officer-code" required>
+              <div *ngIf="'submitted && f.OfficerCode.errors'" class="invalid-feedback">
+                <div *ngIf="'f.OfficerCode.errors.required'">Officer Code is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="OfficerName">Officer Name</label>
+              <input type="text" class="form-control" value="Arun" formControlName="OfficerName" [ngClass]="{ 'is-invalid': submitted && f.OfficerName.errors }"
+                placeholder="Officer-name" required>
+              <div *ngIf="'submitted && f.OfficerName.errors'" class="invalid-feedback">
+                <div *ngIf="'f.OfficerName.errors.required'">Officer Name is required</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Update</button>
+          <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Cancel</button>
+          <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--/.col-->

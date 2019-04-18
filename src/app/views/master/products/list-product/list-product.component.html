@@ -1,0 +1,55 @@
+<!-- list user -->
+<div class="animated fadeIn">
+    <div class="row">
+      <div class="col-lg-8">
+          <div class="card">
+            <div class="card-header">
+                <i class="fa fa-align-justify"></i> Product List
+                <button [routerLink]=" ['/master/addProduct'] " _ngcontent-c1="" class="btn btn-sm btn-primary pull-right" ><i _ngcontent-c1="" class="fa fa-dot-circle-o"></i> Add</button>
+            </div>
+            <div class="card-body">
+              <table class="table table-responsive-sm">
+                <thead>
+                  <tr>
+                    <th>Product Name</th>
+                    <th>Fat_Per</th>
+                    <th>Snf Per</th>
+                    <th>Product Group Id</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>TONED MILK</td>
+                    <td>3.1</td>
+                    <td>8.5</td>
+                    <td>1</td>
+                    <td>
+                      <span class="badge badge-success">Active</span>
+                    </td>
+                    <td>
+                        <button class="btn btn-primary"  [routerLink]=" ['/master/editProduct'] "style="margin-left: 20px;"> Edit</button>
+                        <!-- <button class="btn btn-danger"  (click)="deleteUser(i)"  style="margin-left: 1px;"> Delete</button> -->
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>Curd</td>
+                      <td>2.1</td>
+                      <td>5.5</td>
+                      <td>1</td>
+                      <td>
+                        <span class="badge badge-success">Active</span>
+                      </td>
+                      <td>
+                          <button class="btn btn-primary"  [routerLink]=" ['/master/editProduct'] "style="margin-left: 20px;"> Edit</button>
+                          <!-- <button class="btn btn-danger"  (click)="deleteUser(i)"  style="margin-left: 1px;"> Delete</button> -->
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>

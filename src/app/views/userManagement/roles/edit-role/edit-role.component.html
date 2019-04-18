@@ -1,0 +1,30 @@
+<!--/.col add User-->
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-header">
+        <i class="fa fa-align-justify"></i> Role Edit
+        <button [routerLink]=" ['/users/listRole'] " _ngcontent-c1="" class="btn btn-sm btn-primary pull-right" ><i _ngcontent-c1="" class="fa fa-dot-circle-o"></i> List</button>
+
+    </div>
+
+    <form  [formGroup]="editForm" (ngSubmit)="onSubmit()" >
+      <div class="card-body" >
+
+        <div class="form-group col-sm-3" >
+          <label for="roleName"  >Role Name</label>
+
+          <input type="text" class="form-control" formControlName="roleName"  [(ngModel)]="role[1]" >
+          <!-- <div *ngIf="submitted && f.roleName.errors" class="invalid-feedback">
+              <div *ngIf="f.roleName.errors.required">Role Name is required</div>
+          </div> -->
+        </div>
+    </div>
+    <div class="card-footer">
+      <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Update</button>&nbsp;&nbsp;
+      <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Cancel</button>&nbsp;&nbsp;
+      <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>&nbsp;&nbsp;
+    </div>
+  </form>
+</div>
+</div>
+<!--/.col-->

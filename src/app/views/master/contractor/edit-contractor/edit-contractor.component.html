@@ -1,0 +1,148 @@
+
+<div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <button [routerLink]="['/master/listContractor']" _ngcontent-c1="" class="btn btn-sm btn-primary pull-right"><i
+            _ngcontent-c1="" class="fa fa-dot-circle-o"></i> List</button>
+        <strong>Update Contractor</strong>
+      </div>
+      <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+        <div class="card-body">
+          <hr class="hr-text" data-content="Contact Information">
+          <div class="row">
+            <div class="form-group col-sm-3">
+              <label for="contractorCode">Contractor Code</label>
+              <input type="number" class="form-control" formControlName="contractorCode" [ngClass]="{ 'is-invalid': submitted && f.contractorCode.errors }"
+                placeholder="contractor-code" required>
+              <div *ngIf="'submitted && f.contractorCode.errors'" class="invalid-feedback">
+                <div *ngIf="'f.contractorCode.errors.required'">Contractor Code is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="ContractorName">Contractor Name</label>
+              <input type="text" class="form-control" formControlName="ContractorName" [ngClass]="{ 'is-invalid': submitted && f.ContractorName.errors }"
+                placeholder="contractor-name" required>
+              <div *ngIf="'submitted && f.ContractorName.errors'" class="invalid-feedback">
+                <div *ngIf="'f.ContractorName.errors.required'">Contractor Name is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+                <label for="contractorType">Contractor Type</label>
+                <select class="form-control" formControlName="contractorType">
+                 <option value="1">Dealer</option>
+                </select>
+              </div>
+
+            <div class="form-group col-sm-3">
+              <label for="orderNumber">Order Number</label>
+              <input type="number" class="form-control" formControlName="orderNumber" [ngClass]="{ 'is-invalid': submitted && f.orderNumber.errors }"
+                placeholder="order-number" required>
+              <div *ngIf="'submitted && f.orderNumber.errors'" class="invalid-feedback">
+                <div *ngIf="'f.orderNumber.errors.required'">Order Number is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-sm-3">
+              <label for="notificationNumber">Notification Number</label>
+              <input type="number" class="form-control" formControlName="notificationNumber" [ngClass]="{ 'is-invalid': submitted && f.notificationNumber.errors }"
+                placeholder="notification-number" required>
+              <div *ngIf="'submitted && f.notificationNumber.errors'" class="invalid-feedback">
+                <div *ngIf="'f.notificationNumber.errors.required'">Notification Number is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="routeCode"> Route Code</label>
+              <input type="number" class="form-control" formControlName="routeCode" [ngClass]="{ 'is-invalid': submitted && f.routeCode.errors }"
+                placeholder="route-code" required>
+              <div *ngIf="'submitted && f.routeCode.errors'" class="invalid-feedback">
+                <div *ngIf="'f.routeCode.errors.required'">Route Code is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="vehicleNo">Vehicle No</label>
+              <input type="number" class="form-control" formControlName="vehicleNo" [ngClass]="{ 'is-invalid': submitted && f.vehicleNo.errors }"
+                placeholder="vehicle-no" required>
+              <div *ngIf="'submitted && f.vehicleNo.errors'" class="invalid-feedback">
+                <div *ngIf="'f.vehicleNo.errors.required'">Vehicle No is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="extensionOrderNo">Extension Order No</label>
+              <input type="number" class="form-control" formControlName="extensionOrderNo" [ngClass]="{ 'is-invalid': submitted && f.extensionOrderNo.errors }"
+                placeholder="extension-order-no" required>
+              <div *ngIf="'submitted && f.extensionOrderNo.errors'" class="invalid-feedback">
+                <div *ngIf="'f.extensionOrderNo.errors.required'">Extension Order No is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-sm-3">
+              <label for="depositeAmount">Deposite Amount</label>
+              <input type="number" class="form-control" formControlName="depositeAmount" [ngClass]="{ 'is-invalid': submitted && f.depositeAmount.errors }"
+                placeholder="deposite-amount" required>
+              <div *ngIf="'submitted && f.depositeAmount.errors'" class="invalid-feedback">
+                <div *ngIf="'f.depositeAmount.errors.required'">Deposite Amount is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="depositePerticulars"> Deposite Perticulars</label>
+              <input type="number" class="form-control" formControlName="depositePerticulars" [ngClass]="{ 'is-invalid': submitted && f.depositePerticulars.errors }"
+                placeholder="deposite-perticulars" required>
+              <div *ngIf="'submitted && f.depositePerticulars.errors'" class="invalid-feedback">
+                <div *ngIf="'f.depositePerticulars.errors.required'">Deposite Perticulars is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="bankCode">Bank Code</label>
+              <input type="number" class="form-control" formControlName="bankCode" [ngClass]="{ 'is-invalid': submitted && f.bankCode.errors }"
+                placeholder="bank-code" required>
+              <div *ngIf="'submitted && f.bankCode.errors'" class="invalid-feedback">
+                <div *ngIf="'f.bankCode.errors.required'">Bank Code is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="bankAccountNo">Bank Account No</label>
+              <input type="number" class="form-control" formControlName="bankAccountNo" [ngClass]="{ 'is-invalid': submitted && f.bankAccountNo.errors }"
+                placeholder="bank-account-no" required>
+              <div *ngIf="'submitted && f.bankAccountNo.errors'" class="invalid-feedback">
+                <div *ngIf="'f.bankAccountNo.errors.required'">Bank Account No is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-sm-3">
+              <label for="usersCode">Users Code</label>
+              <input type="text" class="form-control" formControlName="usersCode" [ngClass]="{ 'is-invalid': submitted && f.usersCode.errors }"
+                placeholder="users-code" required>
+              <div *ngIf="'submitted && f.usersCode.errors'" class="invalid-feedback">
+                <div *ngIf="'f.usersCode.errors.required'">Users Code is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="bankGrntr">Bank Grntr</label>
+              <input type="text" class="form-control" formControlName="bankGrntr" [ngClass]="{ 'is-invalid': submitted && f.bankGrntr.errors }"
+                placeholder="bank-grntr" required>
+              <div *ngIf="'submitted && f.bankGrntr.errors'" class="invalid-feedback">
+                <div *ngIf="'f.bankGrntr.errors.required'">Bank Grntr is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="tds">TDS</label>
+              <input type="number" class="form-control" formControlName="tds" [ngClass]="{ 'is-invalid': submitted && f.tds.errors }"
+                placeholder="tds" required>
+              <div *ngIf="'submitted && f.tds.errors'" class="invalid-feedback">
+                <div *ngIf="'f.tds.errors.required'">TDS is required</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Update</button>
+          <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Cancel</button>
+          <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--/.col-->

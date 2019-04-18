@@ -1,0 +1,55 @@
+<!--/.col add User-->
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-header">
+      <button
+        [routerLink]="['/users/listPermissions']"
+        _ngcontent-c1=""
+        class="btn btn-sm btn-primary pull-right"
+      >
+        <i _ngcontent-c1="" class="fa fa-dot-circle-o"></i> List
+      </button>
+      <strong>Edit Permissions</strong>
+    </div>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      <div class="card-body">
+        <div class="form-group col-sm-3">
+          <label for="permissionName">Role Name</label>
+          <input
+            type="hidden"
+            class="form-control "
+            *ngFor="let key of editPermissionsList"
+            formControlName="permissionId"
+            [(ngModel)]="key[0]"
+          />
+          <input
+            type="text"
+            class="form-control "
+            *ngFor="let key of editPermissionsList"
+            formControlName="permissionName"
+            [(ngModel)]="key[1]"
+          />
+          <div
+            *ngIf="submitted && f.permissionName.errors"
+            class="invalid-feedback">
+            <div *ngIf="f.permissionName.errors.required">
+              Permission Name is required
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button type="submit" class="btn btn-sm btn-primary">
+          <i class="fa fa-dot-circle-o"></i> Update</button
+        >&nbsp;&nbsp;
+        <button type="submit" class="btn btn-sm btn-primary">
+          <i class="fa fa-dot-circle-o"></i> Cancel</button
+        >&nbsp;&nbsp;
+        <button type="reset" class="btn btn-sm btn-danger">
+          <i class="fa fa-ban"></i> Reset</button
+        >&nbsp;&nbsp;
+      </div>
+    </form>
+  </div>
+</div>
+<!--/.col-->

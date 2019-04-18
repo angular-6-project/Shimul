@@ -1,0 +1,97 @@
+<!--/.col add User-->
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-header">
+      <button [routerLink]=" ['/users/listUser'] " _ngcontent-c1="" class="btn btn-sm btn-primary pull-right"><i
+          _ngcontent-c1="" class="fa fa-dot-circle-o"></i> List</button>
+      <strong>Add User</strong>
+    </div>
+    <form [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+      <div class="card-body">
+        <hr class="hr-text" data-content="Contact Information">
+        <div class="row">
+          <div class="form-group col-sm-3">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" formControlName="firstName" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"
+              placeholder="first-name" required>
+            <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+              <div *ngIf="f.firstName.errors.required">First Name is required</div>
+            </div>
+          </div>
+          <div class="form-group col-sm-3">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" formControlName="lastName" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }"
+              placeholder="last-name" required>
+            <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+              <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+            </div>
+          </div>
+          <div class="form-group col-sm-3">
+            <label for="userId">User Id</label>
+            <input type="text" class="form-control" formControlName="userId" [ngClass]="{ 'is-invalid': submitted && f.userId.errors }"
+              placeholder="user-id" required>
+            <div class="text-danger" *ngIf="userId.invalid && (userId.dirty || userId.touched)">
+              userId already exists
+            </div>
+            <div *ngIf="submitted && f.userId.errors" class="invalid-feedback">
+              <div *ngIf="f.userId.errors.required">User Id is required</div>
+            </div>
+          </div>
+          <div class="form-group col-sm-3">
+              <label for="mobile">Mobile No</label>
+              <input type="text" formControlName="mobile"  maxlength="10" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }"  placeholder="mobile-no"  />
+              <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+                  <div *ngIf="f.mobile.errors.required">mobile is required</div>
+                  <div *ngIf="f.mobile.errors.minlength">min length 10 </div>
+                  <div *ngIf="f.mobile.errors.maxlength">max length 10 </div>
+              </div>
+          </div>
+
+        
+        </div>
+        <div class="row">
+          <div class="form-group col-sm-3">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" formControlName="email" placeholder="email">
+          </div>
+          <div class="form-group col-sm-3">
+            <label for="role">Role Id</label>
+            <!-- {{multiSelect[0][1]}} -->
+            <select class="form-control" formControlName="roleId">
+              <option value='0' >Please Select</option>
+              <option *ngFor="let key of multiSelect" [value]="key[1]">{{key[2]}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-sm-3">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+              placeholder="password">
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+              <div *ngIf="f.password.errors.required"> Password is required</div>
+              <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+            </div>
+          </div>
+          <div class="form-group col-sm-3">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" class="form-control" formControlName="confirmPassword" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }"
+              placeholder="confirm-password">
+            <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+              <div *ngIf="f.confirmPassword.errors.required">confirm Password is required</div>
+              <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+      <div class="card-footer">
+        <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+        <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!--/.col-->

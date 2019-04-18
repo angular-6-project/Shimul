@@ -1,0 +1,47 @@
+<div class="col-sm-12" *ngIf="addproductBox">
+  <div class="card">
+    <div class="card-header">
+      <button [routerLink]="['/users/listUser']" _ngcontent-c1="" class="btn btn-sm btn-primary pull-right"><i
+          _ngcontent-c1="" class="fa fa-dot-circle-o"></i> List</button>
+      <strong>Update User</strong>
+    </div>
+    <form [formGroup]="editUserForm">
+      <div class="card-body">
+        <hr class="hr-text" data-content="Contact Information">
+        <div class="row">
+          <div class="form-group col-sm-3">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" formControlName="firstName" [(ngModel)]="adunit[2]">
+          </div>
+          <div class="form-group col-sm-3">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" formControlName="lastName" [(ngModel)]="adunit[3]">
+          </div>
+          <div class="form-group col-sm-3">
+            <label for="mobile">Mobile No</label>
+            <input type="number" class="form-control" formControlName="mobile" [(ngModel)]="adunit[4]">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-sm-3">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" formControlName="email" [(ngModel)]="adunit[5]" placeholder="email">
+          </div>
+          <div class="form-group col-sm-3">
+            <label for="select1">Select</label>
+            <select id="select1" name="select1" class="form-control" formControlName="roleId" [(ngModel)]="adunit[7]">
+              <option value="0">Please select</option>
+              <option *ngFor="let key of multiSelect" value="{{key[1]}}">{{key[2]}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button (click)="UpdateUserData()" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i>
+          Update</button>
+        <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!--/.col-->

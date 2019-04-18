@@ -1,0 +1,54 @@
+<!-- list user -->
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> Permission List
+          <button
+            [routerLink]="['/users/addPermissions/']"
+            _ngcontent-c1=""
+            class="btn btn-sm btn-primary pull-right"
+          >
+            <i _ngcontent-c1="" class="fa fa-dot-circle-o"></i> Add
+          </button>
+        </div>
+        <div class="card-body">
+          <table class="table table-responsive-sm">
+            <thead>
+              <tr>
+                <th>Permissions</th>
+
+                <th>
+                  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Actions
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let key of permissionsList; let i = index">
+                <td>{{ key[1] }}</td>
+                <td>
+                  <button
+                    class="btn btn-primary"
+                    (click)="editUser(i)"
+                    style="margin-left: 10px;"
+                  >
+                    Edit
+                  </button>
+                  |
+                  <button
+                    class="btn btn-danger"
+                    (click)="deleteUser(i)"
+                    style="margin-left: 1px;"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

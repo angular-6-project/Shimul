@@ -1,0 +1,38 @@
+<div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <button [routerLink]="['/master/listTcd']" _ngcontent-c1="" class="btn btn-sm btn-primary pull-right"><i
+            _ngcontent-c1="" class="fa fa-dot-circle-o"></i>TCD Range List</button>
+        <strong>Add Tcd</strong>
+      </div>
+      <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+        <div class="card-body">
+          <hr class="hr-text" data-content="Contact Information">
+          <div class="row">
+            <div class="form-group col-sm-3">
+              <label for="TcdCode">Tcd Code</label>
+              <input type="number" class="form-control" formControlName="TcdCode" [ngClass]="{ 'is-invalid': submitted && f.TcdCode.errors }"
+                placeholder="Tcd-code" required>
+              <div *ngIf="'submitted && f.TcdCode.errors'" class="invalid-feedback">
+                <div *ngIf="'f.TcdCode.errors.required'">Tcd Code is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="TcdName">Tcd Name</label>
+              <input type="text" class="form-control" formControlName="TcdName" [ngClass]="{ 'is-invalid': submitted && f.TcdName.errors }"
+                placeholder="Tcd-name" required>
+              <div *ngIf="'submitted && f.TcdName.errors'" class="invalid-feedback">
+                <div *ngIf="'f.TcdName.errors.required'">Tcd Name is required</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+          <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Cancel</button>
+          <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--/.col-->

@@ -1,0 +1,23 @@
+1) npm install -- this one is used to install the basic node module required for the project using package.json listed
+2) ng serve -- this is used to run the project
+3) npm run start:server -- this command is used to run the node serve, for using this we have done some step up in the package json file.
+
+
+
+********************************************
+Already installed command
+
+npm install --save express
+npm install --save mongodb
+npm install --save mongoose
+npm install --save-dev nodemon
+
+npm install jsonwebtoken --save
+npm install passport --save
+npm install passport-local --save
+npm install express-jwt --save
+npm install ngx-spinner --save
+npm install ngx-toastr --save
+
+npm install oracledb --save
+

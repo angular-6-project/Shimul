@@ -1,0 +1,149 @@
+
+<div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <button [routerLink]="['/master/listPacket']" _ngcontent-c1="" class="btn btn-sm btn-primary pull-right"><i
+            _ngcontent-c1="" class="fa fa-dot-circle-o"></i> List</button>
+        <strong>Update Packet</strong>
+      </div>
+      <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+        <div class="card-body">
+          <hr class="hr-text" data-content="Contact Information">
+          <div class="row">
+            <div class="form-group col-sm-3">
+              <label for="packetCode">Packet Code</label>
+              <input type="number" class="form-control" formControlName="packetCode" [ngClass]="{ 'is-invalid': submitted && f.packetCode.errors }"
+                placeholder="packet-code" required>
+              <div *ngIf="'submitted && f.packetCode.errors'" class="invalid-feedback">
+                <div *ngIf="'f.packetCode.errors.required'">Packet Code is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="packetName">Packet Name</label>
+              <input type="text" class="form-control" formControlName="packetName" [ngClass]="{ 'is-invalid': submitted && f.packetName.errors }"
+                placeholder="packet-name" required>
+              <div *ngIf="'submitted && f.packetName.errors'" class="invalid-feedback">
+                <div *ngIf="'f.packetName.errors.required'">Packet Name is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="productCode"> Product Code</label>
+              <input type="number" class="form-control" formControlName="productCode" [ngClass]="{ 'is-invalid': submitted && f.productCode.errors }"
+                placeholder="product-code" required>
+              <div *ngIf="'submitted && f.productCode.errors'" class="invalid-feedback">
+                <div *ngIf="'f.productCode.errors.required'">Fat Per is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="mrp">MRP</label>
+              <input type="text" class="form-control" formControlName="mrp" [ngClass]="{ 'is-invalid': submitted && f.mrp.errors }"
+                placeholder="mrp" required>
+              <div *ngIf="'submitted && f.mrp.errors'" class="invalid-feedback">
+                <div *ngIf="'f.mrp.errors.required'">MRP is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-sm-3">
+              <label for="subRate">Sub Rate</label>
+              <input type="number" class="form-control" formControlName="subRate" [ngClass]="{ 'is-invalid': submitted && f.subRate.errors }"
+                placeholder="sub-rate" required>
+              <div *ngIf="'submitted && f.subRate.errors'" class="invalid-feedback">
+                <div *ngIf="'f.subRate.errors.required'">Packet Code is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="fatPer"> Fat Per</label>
+              <input type="number" class="form-control" formControlName="fatPer" [ngClass]="{ 'is-invalid': submitted && f.fatPer.errors }"
+                placeholder="fat-per" required>
+              <div *ngIf="'submitted && f.fatPer.errors'" class="invalid-feedback">
+                <div *ngIf="'f.fatPer.errors.required'">Fat Per is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="snfPer">Snf Per</label>
+              <input type="number" class="form-control" formControlName="snfPer" [ngClass]="{ 'is-invalid': submitted && f.snfPer.errors }"
+                placeholder="snf-per" required>
+              <div *ngIf="'submitted && f.snfPer.errors'" class="invalid-feedback">
+                <div *ngIf="'f.snfPer.errors.required'">Snf Per is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="units">Units</label>
+              <input type="number" class="form-control" formControlName="units" [ngClass]="{ 'is-invalid': submitted && f.units.errors }"
+                placeholder="units" required>
+              <div *ngIf="'submitted && f.units.errors'" class="invalid-feedback">
+                <div *ngIf="'f.units.errors.required'">Units is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-sm-3">
+              <label for="RegorNot">Reg_or_Not</label>
+              <input type="number" class="form-control" formControlName="RegorNot" [ngClass]="{ 'is-invalid': submitted && f.RegorNot.errors }"
+                placeholder="RegorNot" required>
+              <div *ngIf="'submitted && f.RegorNot.errors'" class="invalid-feedback">
+                <div *ngIf="'f.RegorNot.errors.required'">Reg_or_Not is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="MilkorProduct"> Milk-or-Product</label>
+              <input type="number" class="form-control" formControlName="MilkorProduct" [ngClass]="{ 'is-invalid': submitted && f.MilkorProduct.errors }"
+                placeholder="MilkorProduct" required>
+              <div *ngIf="'submitted && f.MilkorProduct.errors'" class="invalid-feedback">
+                <div *ngIf="'f.MilkorProduct.errors.required'">Milk-or-Product is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="terminated">Terminated</label>
+              <input type="number" class="form-control" formControlName="terminated" [ngClass]="{ 'is-invalid': submitted && f.terminated.errors }"
+                placeholder="terminated" required>
+              <div *ngIf="'submitted && f.terminated.errors'" class="invalid-feedback">
+                <div *ngIf="'f.terminated.errors.required'">Terminated is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="usersCode">Users Code</label>
+              <input type="number" class="form-control" formControlName="usersCode" [ngClass]="{ 'is-invalid': submitted && f.usersCode.errors }"
+                placeholder="users-code" required>
+              <div *ngIf="'submitted && f.usersCode.errors'" class="invalid-feedback">
+                <div *ngIf="'f.usersCode.errors.required'">users code is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-sm-3">
+              <label for="crates">Crates</label>
+              <input type="text" class="form-control" formControlName="crates" [ngClass]="{ 'is-invalid': submitted && f.crates.errors }"
+                placeholder="crates" required>
+              <div *ngIf="'submitted && f.crates.errors'" class="invalid-feedback">
+                <div *ngIf="'f.crates.errors.required'">crates is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="sacNo">Sac No</label>
+              <input type="text" class="form-control" formControlName="sacNo" [ngClass]="{ 'is-invalid': submitted && f.sacNo.errors }"
+                placeholder="sac-no" required>
+              <div *ngIf="'submitted && f.sacNo.errors'" class="invalid-feedback">
+                <div *ngIf="'f.sacNo.errors.required'">sac no is required</div>
+              </div>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="uom">UOM</label>
+              <input type="number" class="form-control" formControlName="uom" [ngClass]="{ 'is-invalid': submitted && f.uom.errors }"
+                placeholder="uom" required>
+              <div *ngIf="'submitted && f.uom.errors'" class="invalid-feedback">
+                <div *ngIf="'f.uom.errors.required'">UOM is required</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button  type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Update</button>
+          <button  class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Cancel</button>
+          <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--/.col-->
